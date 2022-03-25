@@ -41,7 +41,7 @@ public class Basket {
         return Basket.itemsCount += item;
     }
 
-    public static int calcRoundPrice() {return Basket.sumPrice / Basket.basketCount;}
+    public static float calcRoundPrice() {return Basket.sumPrice / Basket.itemsCount;}
 
     public static int getItemsCount(){ return Basket.itemsCount;}
 
