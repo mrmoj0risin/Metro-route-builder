@@ -4,6 +4,9 @@ public class Main {
         Basket basket = new Basket();
         basket.add("Milk", 40);
         basket.print("Milk");
-//asdfasdfasdfasdfasdfasd
+        basket.add("Eggs", 200, 2);
+
+        System.out.println("Rounded price " + Basket.calcRoundPrice());
+
     }
 }
