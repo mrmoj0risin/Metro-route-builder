@@ -1,11 +1,11 @@
-public class Container {
+ class Container {
     private int count;
 
-    public void addCount(int value) {
+     void addCount(int value) {
         count += value;
     }
 
-    public Integer getCount() {
+     Integer getCount() {
         return count    ;
     }
 }

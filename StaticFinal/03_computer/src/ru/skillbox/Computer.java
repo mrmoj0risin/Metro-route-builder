@@ -1,6 +1,6 @@
 package ru.skillbox;
 
-public class Computer {
+ class Computer {
     private Processor processor;
     private RAM ram;
     private Storage storage;
@@ -9,7 +9,7 @@ public class Computer {
     private final String vendor;
     private final String name;
 
-    public Computer(Processor processor, RAM ram, Storage storage, Screen screen,
+     Computer(Processor processor, RAM ram, Storage storage, Screen screen,
                     Keyboard keyboard, String vendor, String name) {
         this.processor = processor;
         this.ram = ram;
@@ -20,7 +20,7 @@ public class Computer {
         this.name = name;
     }
 
-    public int getTotalWeight(){
+     int getTotalWeight(){
         int totalWeight = this.keyboard.getWeight() +
                 this.processor.getWeight() +
                 this.ram.getWeight() +
@@ -28,51 +28,51 @@ public class Computer {
         return totalWeight;
     }
 
-    public Processor getProcessor() {
+     Processor getProcessor() {
         return processor;
     }
 
-    public void setProcessor(Processor processor) {
+     void setProcessor(Processor processor) {
         this.processor = processor;
     }
 
-    public RAM getRam() {
+     RAM getRam() {
         return ram;
     }
 
-    public void setRam(RAM ram) {
+     void setRam(RAM ram) {
         this.ram = ram;
     }
 
-    public Storage getStorage() {
+     Storage getStorage() {
         return storage;
     }
 
-    public void setStorage(Storage storage) {
+     void setStorage(Storage storage) {
         this.storage = storage;
     }
 
-    public Screen getScreen() {
+     Screen getScreen() {
         return screen;
     }
 
-    public void setScreen(Screen screen) {
+     void setScreen(Screen screen) {
         this.screen = screen;
     }
 
-    public Keyboard getKeyboard() {
+     Keyboard getKeyboard() {
         return keyboard;
     }
 
-    public void setKeyboard(Keyboard keyboard) {
+     void setKeyboard(Keyboard keyboard) {
         this.keyboard = keyboard;
     }
 
-    public String getVendor() {
+     String getVendor() {
         return vendor;
     }
 
-    public String getName() {
+     String getName() {
         return name;
     }
 }

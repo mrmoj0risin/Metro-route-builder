@@ -1,8 +1,8 @@
 package ru.skillbox;
 
-public class Main {
+ class Main {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
     ArithmeticCalculator calc = new ArithmeticCalculator(24,6);
 

@@ -3,7 +3,7 @@ package ru.skillbox;
 import ru.skillbox.enums.ScreenResolution;
 import ru.skillbox.enums.ScreenType;
 
-public class Screen {
+ class Screen {
     private final ScreenResolution screenResolution;
     private final ScreenType screenType;
     private final int weight;
@@ -14,7 +14,7 @@ public class Screen {
         this.weight = weight;
     }
 
-    public int getWeight() {
+     int getWeight() {
         return weight;
     }
 }

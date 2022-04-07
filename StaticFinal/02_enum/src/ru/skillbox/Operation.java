@@ -1,5 +1,5 @@
 package ru.skillbox;
 
-public enum Operation {
+ enum Operation {
     ADD, SUBTRACT, MULTIPLY
 }

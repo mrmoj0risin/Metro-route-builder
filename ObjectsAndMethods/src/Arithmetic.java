@@ -1,8 +1,8 @@
-public class Arithmetic {
+ class Arithmetic {
     private int x;
     private int y;
 
-    public Arithmetic(int x, int y) {
+     Arithmetic(int x, int y) {
 
         this.x = x;
         this.y = y;
@@ -10,19 +10,19 @@ public class Arithmetic {
 
     }
 
-    public int getSum(){
+     int getSum(){
         return this.y + this.x;
     }
 
-    public int getMulti(){
+     int getMulti(){
         return this.y * this.x;
     }
 
-    public int getMax(){
+     int getMax(){
         return Math.max(this.y, this.x);
     }
 
-    public int getMin(){
+     int getMin(){
         return Math.min(this.y, this.x);
     }
 }

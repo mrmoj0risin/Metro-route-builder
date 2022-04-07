@@ -1,4 +1,6 @@
-public class TransportOrder {
+package ru.skillbox;
+
+ class TransportOrder {
     private final Dimensions dimensions;
     private final int weight;
     private final String adress;
@@ -6,7 +8,7 @@ public class TransportOrder {
     private final boolean isFragile = true;
     private final int regNumber;
 
-    public TransportOrder(Dimensions dimensions, int weight, String adress, int regNumber) {
+     TransportOrder(Dimensions dimensions, int weight, String adress, int regNumber) {
         this.dimensions = dimensions;
         this.weight = weight;
         this.adress = adress;

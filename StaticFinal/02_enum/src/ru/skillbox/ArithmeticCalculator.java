@@ -1,6 +1,6 @@
 package ru.skillbox;
 
-public class ArithmeticCalculator {
+ class ArithmeticCalculator {
 
     private int x;
     private int y;
@@ -11,7 +11,7 @@ public class ArithmeticCalculator {
         this.y = y;
     }
 
-    public int calculate(Operation operation){
+     int calculate(Operation operation){
 
         switch (operation) {
             case ADD -> {

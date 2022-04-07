@@ -1,3 +1,5 @@
+package ru.skillbox;
+
 public class Dimensions {
     private final int lenght;
     private final int height;
@@ -11,7 +13,7 @@ public class Dimensions {
 
     }
 
-    public int getVolume() {
+     int getVolume() {
         return lenght * height * depth;
     }
 

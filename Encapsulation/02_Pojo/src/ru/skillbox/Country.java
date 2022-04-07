@@ -1,4 +1,6 @@
-public class Country {
+package ru.skillbox;
+
+ class Country {
 
 
     private String name;
@@ -8,47 +10,47 @@ public class Country {
     private boolean isNearSea;
 
 
-    public Country(String name) {
+     Country(String name) {
         this.name = name;
     }
 
-    public String getName() {
+     String getName() {
         return name;
     }
 
-    public void setName(String name) {
+     void setName(String name) {
         this.name = name;
     }
 
-    public int getPopulation() {
+     int getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
+     void setPopulation(int population) {
         this.population = population;
     }
 
-    public int getSquare() {
+     int getSquare() {
         return square;
     }
 
-    public void setSquare(int square) {
+     void setSquare(int square) {
         this.square = square;
     }
 
-    public String getCapital() {
+     String getCapital() {
         return capital;
     }
 
-    public void setCapital(String capital) {
+     void setCapital(String capital) {
         this.capital = capital;
     }
 
-    public boolean isNearSea() {
+     boolean isNearSea() {
         return isNearSea;
     }
 
-    public void setNearSea(boolean nearSea) {
+     void setNearSea(boolean nearSea) {
         isNearSea = nearSea;
     }
 }

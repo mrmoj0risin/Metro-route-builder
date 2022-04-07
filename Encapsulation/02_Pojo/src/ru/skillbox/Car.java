@@ -1,4 +1,6 @@
-public class Car {
+package ru.skillbox;
+
+ class Car {
 
     private int productionYear;
     private String color;
@@ -10,35 +12,35 @@ public class Car {
         this.color = color;
     }
 
-    public int getProductionYear() {
+     int getProductionYear() {
         return productionYear;
     }
 
-    public void setProductionYear(int productionYear) {
+     void setProductionYear(int productionYear) {
         this.productionYear = productionYear;
     }
 
-    public String getColor() {
+     String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+     void setColor(String color) {
         this.color = color;
     }
 
-    public String getEngine() {
+     String getEngine() {
         return engine;
     }
 
-    public void setEngine(String engine) {
+     void setEngine(String engine) {
         this.engine = engine;
     }
 
-    public int getWeight() {
+     int getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+     void setWeight(int weight) {
         this.weight = weight;
     }
 }
