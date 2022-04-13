@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-public class Employee {
+public class Employee  {
 
   private String name;
   private Integer salary;
@@ -88,5 +88,6 @@ public class Employee {
   public int hashCode() {
     return Objects.hash(name, salary, workStart);
   }
+
 
 }
