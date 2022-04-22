@@ -1,8 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CustomerStorage {
+
     private final Map<String, Customer> storage;
 
     public CustomerStorage() {
@@ -21,7 +23,31 @@ public class CustomerStorage {
                     " add Василий Петров vasily.petrov@gmail.com +79215637722");
         }
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
-        storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
+
+        String email;
+        String regexEmail = "^(.+)@(\\S+)$";
+        Pattern emailPattern = Pattern.compile(regexEmail, Pattern.MULTILINE);
+        Matcher emailMatcher =emailPattern.matcher(components[INDEX_EMAIL]);
+
+        if (emailMatcher.matches()){
+            email = emailMatcher.group(0);
+        }
+        else {
+            throw new RuntimeException("Incorrect email syntax");
+        }
+
+        String phone;
+        String regexPhone = "[+7]\\d{11}|[8|7]\\d{10}";
+        Pattern phonePattern = Pattern.compile(regexPhone, Pattern.MULTILINE);
+        Matcher phoneMatcher = phonePattern.matcher(components[INDEX_PHONE]);
+
+        if (phoneMatcher.find()){
+            phone = phoneMatcher.group(0);
+        }
+        else {
+            throw new RuntimeException("Incorrect phone number syntax");
+        }
+        storage.put(name, new Customer(name, phone, email));
     }
 
     public void listCustomers() {
@@ -30,14 +56,14 @@ public class CustomerStorage {
     }
 
     public void removeCustomer(String name) {
-        if (storage.containsValue(name)) {
+        if (storage.containsKey(name)) {
             storage.remove(name);
         }
         else { throw new RuntimeException("No customer with name - " + name);}
     }
 
     public Customer getCustomer(String name) {
-        if (storage.containsValue(name)) {
+        if (storage.containsKey(name)) {
             return storage.get(name);
         }
         else { throw new RuntimeException("No customer with name - " + name);}

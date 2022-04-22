@@ -33,12 +33,8 @@ public class Main {
                 } else {
                     System.out.println(COMMAND_ERROR);
                 }
-            }
-            catch (ArrayIndexOutOfBoundsException | IllegalArgumentException ex){
+            } catch (RuntimeException ex){
                 System.out.println(ex.getMessage());
-            }
-            catch (RuntimeException exception){
-                System.out.println(exception.getMessage());
             }
         }
     }
