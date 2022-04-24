@@ -95,7 +95,7 @@ public class RouteCalculator {
                         route.addAll(way);
                     }
                 }
-            }
+                }
         }
         return route;
     }

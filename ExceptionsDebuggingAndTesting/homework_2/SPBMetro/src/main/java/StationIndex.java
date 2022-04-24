@@ -54,7 +54,43 @@ public class StationIndex {
     }
 
     public Set<Station> getConnectedStations(Station station) {
+//        parseLineConnections();
         return connections.containsKey(station) ?
                 connections.get(station) : new TreeSet<>();
     }
+
+//    public boolean lineConnected(Station station1, Station station2){
+//
+//        Line line1 =  station1.getLine();
+//        Line line2 =  station2.getLine();
+//
+//
+//
+//        return true;
+//    }
+
+//    public void parseLineConnections(){
+//        Map<Line,List<Line>> connectionsList = new TreeMap<>() ;
+//
+//        for (Map.Entry<Station, TreeSet<Station>> entry: connections.entrySet()){
+//
+//            List<Line> lineList = new ArrayList<>();
+//            Line key = entry.getKey().getLine();
+//            if (entry.getValue().size() > 1){
+//                entry.getValue().forEach(a -> lineList.add(a.getLine()));
+//            }
+//            else {
+//                if (entry.getValue().pollLast().getLine() != null) {
+//                    lineList.add( entry.getValue().pollLast().getLine());
+//                }
+//            }
+//            connectionsList.put(key,lineList);
+//        }
+//
+//        for (Map.Entry<Line,List<Line>> entry: connectionsList.entrySet()){
+//            System.out.println(entry.getKey() + " - " );
+//            entry.getValue().forEach(System.out::println);
+//        }
+//
+//    }
 }
