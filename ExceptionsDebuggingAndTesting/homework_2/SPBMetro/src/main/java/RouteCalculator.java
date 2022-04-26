@@ -1,9 +1,6 @@
 import core.Station;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class RouteCalculator {
     private final StationIndex stationIndex;
@@ -97,6 +94,9 @@ public class RouteCalculator {
                 }
                 }
         }
+        if (route.isEmpty()){
+            route = getRouteWithTwoConnections(from,to);
+        }
         return route;
     }
 
@@ -132,9 +132,7 @@ public class RouteCalculator {
             for (Station dstStation : toLineStations) {
                 List<Station> connectedLineRoute =
                         getRouteViaConnectedLine(srcStation, dstStation);
-                if (connectedLineRoute == null) {
-                    continue;
-                }
+                if (connectedLineRoute == null) continue;
                 List<Station> way = new ArrayList<>();
                 way.addAll(getRouteOnTheLine(from, srcStation));
                 way.addAll(connectedLineRoute);
